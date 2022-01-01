@@ -20,7 +20,7 @@ import { UserResolver } from "./resolvers";
 
     await createConnection();
     app.get("/", (_req, res) => res.send("hello"));
-    app.listen(process.env.TYPEORM_PORT, () => {
+    app.listen(process.env.PORT, () => {
       console.log("express server started");
     });
   });
