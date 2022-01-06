@@ -24,7 +24,7 @@ Setup pqAdmin in Docker
 docker run -p 80:80 -e 'PGADMIN_DEFAULT_EMAIL=user@domain.local' -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' --name dev-pgadmin -d dpage/pgadmin4
 ```
 
-Go to http://localhost:80 and login using user@domain.local and Supersecret
+Go to http://localhost:80 and login using user@domain.local and SuperSecret
 
 Connect to server using 172.17.0.2 as hostname and postgres/Pass2020! for username/password
 
