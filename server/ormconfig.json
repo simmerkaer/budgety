@@ -7,8 +7,8 @@
   "database": "postgres",
   "synchronize": true,
   "logging": false,
-  "entities": ["dist/entity/**/*.ts"],
-  "migrations": ["src/migration/**/*.ts"],
+  "entities": ["dist/entity/**/*.js"],
+  "migrations": ["/migration/**/*.ts"],
   "subscribers": ["src/subscriber/**/*.ts"],
   "cli": {
     "entitiesDir": "src/entity",

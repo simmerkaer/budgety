@@ -1,0 +1,10 @@
+services:
+  postgresdb:
+    image: postgres
+    container_name: postgres_db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=Pass2020!
+    volumes:
+      - c:/users/steffen/documents/postgres-data/:/var/lib/postgresql/data
