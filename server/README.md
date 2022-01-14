@@ -8,13 +8,7 @@ https://www.youtube.com/watch?v=25GS0MLT8JU
 
 ## How to run
 
-### PostgresQL
-
-Setup PostgresQL in Docker (todo: setup docker compose)
-
-```
-docker run -d --name dev-postgres -e POSTGRES_PASSWORD=Pass2020! -v c:/users/sim/documents/postgres-data/:/var/lib/postgresql/data -p 5432:5432 postgres
-```
+Run ```docker-compose``` up.
 
 ### pqAdmin
 

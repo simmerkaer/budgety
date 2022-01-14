@@ -54,9 +54,7 @@ export class UserResolver {
     @Arg("email") email: string,
     @Arg("password") password: string
   ) {
-    console.log("hashing");
     const hashedPassword = await hash(password, 1);
-    console.log("hashed", hashedPassword);
     try {
       await User.insert({
         email,
