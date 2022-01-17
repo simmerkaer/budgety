@@ -18,11 +18,8 @@ import { UserResolver } from "./resolvers";
   apolloServer.start().then(async (_) => {
     apolloServer.applyMiddleware({ app });
 
-    try {
-      await createConnection();
-    } catch (error) {
-      console.log(error);
-    }
+    await createConnection();
+
     app.get("/", (_req, res) => res.send("hello"));
     app.listen(process.env.PORT, () => {
       console.log("express server started");
