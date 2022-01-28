@@ -1,7 +1,7 @@
 FROM node:16
 
 # Create app dir
-WORKDIR /usr/src/app
+WORKDIR /src
 
 
 COPY package.json ./
@@ -14,7 +14,5 @@ COPY . .
 RUN yarn build
 ENV NODE_ENV development
 
-ENV PORT 4000
-
-CMD ["node", "dist/index.js"]
 USER node
+CMD ["node", "dist/index.js"]

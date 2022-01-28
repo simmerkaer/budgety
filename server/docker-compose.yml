@@ -1,10 +1,25 @@
 services:
   postgresdb:
     image: postgres
+    restart: always
     container_name: postgres_db
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_PASSWORD=Pass2020!
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     volumes:
-      - /volume/:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/create_tables.sql
+
+  # api:
+  #   container_name: express_api
+  #   build: .
+  #   depends_on:
+  #     - postgresdb
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - .:/src
+  #     - /src/node_modules
+  #   environment:
+  #     NODE_ENV: development

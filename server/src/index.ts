@@ -21,8 +21,8 @@ import { UserResolver } from "./resolvers";
     await createConnection();
 
     app.get("/", (_req, res) => res.send("hello"));
-    app.listen(process.env.PORT, () => {
-      console.log("express server started");
+    app.listen(3000, "0.0.0.0", () => {
+      console.log("Express web server started: http://0.0.0.0:3000");
     });
   });
 })();
