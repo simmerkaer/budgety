@@ -8,19 +8,7 @@ https://www.youtube.com/watch?v=25GS0MLT8JU
 
 ## How to run
 
-Run ```docker-compose``` up.
-
-### pqAdmin
-
-Setup pqAdmin in Docker
-
-```
-docker run -p 80:80 -e 'PGADMIN_DEFAULT_EMAIL=user@domain.local' -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' --name dev-pgadmin -d dpage/pgadmin4
-```
-
-Go to http://localhost:80 and login using user@domain.local and SuperSecret
-
-Connect to server using 172.17.0.2 as hostname and postgres/Pass2020! for username/password
+Run `docker-compose` up to run postgres database.
 
 ### GraphQL server
 
@@ -38,4 +26,4 @@ yarn start
 
 The api can then be accessed at http://localhost:3000
 
-Note that the port can vary depending on what the ENV variable PORT has been set to.
+GraphQL server can be accessed at http://localhost:3000/graphql
