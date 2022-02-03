@@ -1,16 +1,11 @@
-import {
-  Center,
-  Container,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Input,
-} from "@chakra-ui/react";
-import type { NextPage } from "next";
-import styles from "../styles/Home.module.css";
+import { useEffect } from "react";
+import { useMeQuery } from "../graphql/generated/graphql-operations";
+import { useRouter } from "next/router";
+import { useIsAuth } from "./../utils/useIsAuth";
 
-const Home: NextPage = () => {
-  return <div>welcome</div>;
+const Home = () => {
+  const me = useIsAuth();
+  return <div>you are: {me?.email} </div>;
 };
 
 export default Home;
